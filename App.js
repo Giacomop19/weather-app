@@ -1,12 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
+import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { getCity } from './api/api';
+import 'react-native-safe-area-context';
+import 'react-native-gesture-handler';
+import Stack from './navigation/Stack';
+import { Provider } from 'react-redux';
+import store from './src/utils/redux/store';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack/>
+      </NavigationContainer>
+    </Provider>
   );
 }
 
