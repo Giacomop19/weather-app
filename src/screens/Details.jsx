@@ -7,7 +7,7 @@ const Details = () => {
 const route = useRoute()
 
 //route.params = {}
-console.log("these are my params", route?.params)
+// console.log("these are my params", route?.params)
 
 
   return (

@@ -9,8 +9,6 @@ export async function getCity(city) {
         .then((response) => {
             
             const data = response.data
-            
-
             const weather = {
                 temp : data?.main?.temp,
                 max : data?.main?.temp_max,

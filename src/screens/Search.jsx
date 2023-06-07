@@ -7,10 +7,11 @@ import { useNavigation } from '@react-navigation/native'
 const Search = () => {
   const navigation = useNavigation()
   const [city, setCity] = useState('')
+  
 
   async function handleSearch(){
     const data = await getCity(city)
-    return navigation.navigate('details', {city : data})
+    return navigation.navigate('card', {city : data})
   }
 
   return (
